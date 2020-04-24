@@ -1,14 +1,7 @@
 import { setScope, createComponent, getState, watch, mapActions } from 'r9x_js'
 
-import '../../assets/reset.css'
-import '../../assets/styles.css'
-
-import appHeader from '../appHeader/appHeader.component'
-import appCategory from '../appCategory/appCategory.component'
-
-import HTML from './appMain.template'
-import CSS from './appMain.styles'
-
+import HTML from './appCategory.template'
+import CSS from './appCategory.styles'
 
 export default () => {
 
@@ -24,13 +17,13 @@ export default () => {
     ])
 
 
-    const name = () => 'app-main'
+    const name = () => 'app-category'
 
     const template = () => {
         return { HTML, CSS }
     }
 
-    const children = () => [appHeader, appCategory]
+    const children = () => []
 
     const hooks = () => [
         beforeOnRender,
@@ -46,8 +39,8 @@ export default () => {
     const beforeOnRender = () => []
     const afterOnRender = () => []
 
-    const renderDelivery = () => {
-        render('app-main', getState())
+    const rerender = () => {
+        render('app-category', getState())
     }
 
     return createComponent()

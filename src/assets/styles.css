@@ -1,0 +1,42 @@
+body {
+    font-family: 'Baloo Bhaina 2', cursive;
+    background: #fcfcfc;
+}
+
+.grid {}
+
+@media all and (min-width:981px) {
+    .grid .grid-d {
+        display: block;
+        float: left;
+        width: 25%;
+        padding: 15px;
+    }
+}
+
+@media all and (max-width:980px) {
+    .grid .grid-d {
+        display: block;
+        float: left;
+        width: 33.333%;
+        padding: 15px;
+    }
+}
+
+@media all and (max-width:780px) {
+    .grid .grid-d {
+        display: block;
+        float: left;
+        width: 50%;
+        padding: 15px;
+    }
+}
+
+@media all and (max-width:580px) {
+    .grid .grid-d {
+        display: block;
+        float: left;
+        width: 100%;
+        padding: 15px;
+    }
+}

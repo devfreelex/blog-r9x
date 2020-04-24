@@ -9,7 +9,7 @@
         "prebuild-h": "shx rm -rf dist/**/*",
         "build-h": "parcel watch index.html & http-server dist --port 8080 -o",
         "prebuild-p": "shx rm -rf dist/**/*",
-        "build-p": "cross-env NODE_ENV=production parcel build index.html --public-url ./"
+        "build-p": "cross-env NODE_ENV=production parcel build browser index.html --public-url ./"
     },
     "browserslist": [
         "IE 10",

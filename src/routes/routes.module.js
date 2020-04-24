@@ -1,10 +1,13 @@
-import appHelloWorld from '../components/appHelloWolrd/appHelloWorld.component'
 import appNotFound from '../components/appNotFound/appNotFound.component'
+import appPosts from '../components/appPosts/appPosts.component'
+import appPostDetail from '../components/appPost/appPostDetail.component'
+import appMostRead from '../components/appMostRead/appMostRead.component'
 
 export default [
-    { title: 'Home', hashExp: /(#\/home)$/, component: appHelloWorld },
-    // { title: 'Produto', hashExp: /(#\/produto\/\w+)$/, component: appDetailProduct },
-    // { title: 'entrega', hashExp: /(#\/entrega)$/, component: appDelivery },
+    { title: 'Home', hashExp: /(#\/home)$/, component: appPosts },
+    { title: 'Post', hashExp: /(#\/post\/\w+)$/, component: appPostDetail },
+    { title: 'Category', hashExp: /(#\/categories\/\w+)$/, component: appPosts },
+    { title: 'Cart', hashExp: /(#\/most-read)$/, component: appMostRead },
     // { title: 'Cart', hashExp: /(#\/cesta)$/, component: appCart },
     { title: 'Not Found', hashExp: /^[#\/404]$/, component: appNotFound }
 ]
