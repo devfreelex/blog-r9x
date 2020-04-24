@@ -1,9 +1,11 @@
 import { setScope, createComponent, getState, watch, mapActions, render } from 'r9x_js'
+import moment from 'moment'
+import 'moment/locale/pt-br';
 
 import HTML from './appPostDetail.template'
 import CSS from './appPostDetail.styles'
 
-let counter = 0
+
 export default () => {
 
     watch(['SET_POST_BY_ID'], () => [rerender])
@@ -43,9 +45,11 @@ export default () => {
     const getPostById = () => {
         const hash = window.location.hash
         const [, , postId] = hash.split('/')
-        const [setPostById, , , countView] = mapActions()
+        const [setPostById, , , countView, , addToHistory] = mapActions()
+        const time = moment(time).locale('pt-br').format('llll')
         setPostById({ postId })
         countView({ postId })
+        addToHistory({ postId, time })
     }
 
     const rerender = () => {

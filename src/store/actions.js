@@ -20,10 +20,15 @@ const setMostRead = (payload) => {
     dispatch('SET_MOST_READ', payload)
 }
 
+const addToHistory = (payload) => {
+    dispatch('ADD_TO_HISTORY', payload)
+}
+
 export default {
     setPostById,
     toggleMenu,
     setDataView,
     countView,
-    setMostRead
+    setMostRead,
+    addToHistory
 }

@@ -46,6 +46,7 @@
     "dependencies": {
         "@babel/cli": "^7.8.4",
         "mdn-polyfills": "^5.20.0",
+        "moment": "^2.24.0",
         "r9x_js": "^1.0.7",
         "whatwg-fetch": "^3.0.0"
     }

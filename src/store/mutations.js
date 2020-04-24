@@ -29,10 +29,25 @@ const SET_MOST_READ = (state, payload) => {
     state.mostRead = [...payload.positions]
 }
 
+const ADD_TO_HISTORY = (state, payload) => {
+
+    const post = state.posts.find(post => {
+        if (post && post._id === payload.postId) return post
+    })
+
+    if (post) {
+        post.time = payload.time
+        state.history.push(post)
+    }
+
+
+}
+
 export default {
     SET_POST_BY_ID,
     TOGGLE_MENU,
     SET_DATA_VIEW,
     COUNT_VIEW,
-    SET_MOST_READ
+    SET_MOST_READ,
+    ADD_TO_HISTORY
 }

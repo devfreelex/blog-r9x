@@ -223,5 +223,6 @@ export default {
         }
     },
     postsView: [],
-    mostRead: []
+    mostRead: [],
+    history: []
 }
