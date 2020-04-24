@@ -74,13 +74,13 @@ export default (ctx) => {
         display:block;
         float:left;
         width:calc(100% - 90px);
-        padding:0 0 15px 0;
         text-align:left;
         color:#666
     }
 
     .post-title {
-        font-size: 1.2em
+        font-size: 1.2em;
+        padding:0 0 5px 0;
     }
 
     .post-text {
@@ -91,8 +91,21 @@ export default (ctx) => {
     }
     
     .post-text p {
-        color:#666
+        color:#666;
     }
 
+    .post-text a {
+        text-decoration:none;
+        outline:none;
+        color:#666        
+    }
+
+    .post-views {
+        display:block;
+        float:left;
+        width:100%;
+        font-weight:600;
+        padding-top:5px;
+    }
     `
 }

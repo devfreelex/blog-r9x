@@ -4,15 +4,17 @@ import postSkin from '../../assets/img/cover.jpg'
 
 const postTemplate = (post) => {
     return html `
+
         <article class="post">
             <header class="post-header">
                 <div class="post-skin">
                     <img src="${postSkin}">
                 </div>
-                <h1 class="post-title">${post.title}</h1>
+                <a href="#/post/${post._id}"><h1 class="post-title">${post.title}</h1></a>
             </header>
             <div class="post-text">
-                <p class="content">${post.description.paragraphs[0]}</p>
+                <a href="#/post/${post._id}">${post.description.paragraphs[0]}</a>
+                <span class="post-views"> <b class="post-label-views">Views:</b> ${post.views || '0'}</span>
             </div>
         </article>
     `
