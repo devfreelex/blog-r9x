@@ -5,6 +5,7 @@
     "main": "main",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "parcel index.html",
         "dev": "parcel index.html -p 3000",
         "prebuild-h": "shx rm -rf dist/**/*",
         "build-h": "parcel watch index.html & http-server dist --port 8080 -o",

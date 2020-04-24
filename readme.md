@@ -337,7 +337,7 @@ No código acima temos a importação dos módulos:
 
 A aplicação se propõem a exibir posts, contabilizar exibições e exibir um histórico de leitura e você pode acessá-la aqui: ---------LINKPARAACESSARAAPLICAÇÃO----------
 
-![Alt text](src/assets/img/img-readme.jpg?raw=true "Title")
+![Alt text](src/assets/img/screenshot-app.png?raw=true "Title")
 
 Para rodar o projeto localmente siga os passos abaixo: 
 
