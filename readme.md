@@ -335,7 +335,7 @@ No código acima temos a importação dos módulos:
 
 # A aplicação
 
-A aplicação se propõem a exibir posts, contabilizar exibições e exibir um histórico de leitura e você pode acessá-la aqui: ---------LINKPARAACESSARAAPLICAÇÃO----------
+A aplicação se propõem a exibir posts, contabilizar exibições e exibir um histórico de leitura e você pode acessá-la aqui: http://beelearn.surge.sh
 
 ![Alt text](src/assets/img/screenshot-app.png?raw=true "Title")
 
