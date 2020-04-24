@@ -2,7 +2,7 @@ import { css } from 'r9x_js'
 
 export default (ctx) => {
     return css `
-    ${ctx} { 
+    .title { 
         display:block;
         float:left;
         width:100%;

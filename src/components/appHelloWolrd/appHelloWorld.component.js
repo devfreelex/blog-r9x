@@ -39,7 +39,7 @@ export default () => {
     const beforeOnRender = () => []
     const afterOnRender = () => []
 
-    const renderDelivery = () => {
+    const rerender = () => {
         render('app-hello-world', getState())
     }
 

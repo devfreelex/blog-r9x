@@ -38,3 +38,101 @@ Outro ponto muito importante a ser observado é a utilização da biblioteca rea
 "r9x_js": "^1.0.7"
 ```
 > Foi com ela (R9x) que construí toda a aplicação... "Tudo reativo!!!" vale salientar.
+
+### Estrutura do projeto
+
+A estrutura de diretórios da aplicação segue a seguinte arquitetura:
+
+![Alt text](src/assets/img/img-readme.jpg?raw=true "Title")
+
+
+### Entendendo a estrutura reativa
+
+* Component
+
+```js
+
+import HTML from './appHelloWorld.template'
+import CSS from './appHelloWorld.styles'
+
+export default () => {
+
+    watch([], () => [])
+
+    setScope(() => [
+        name,
+        template,
+        children,
+        hooks,
+        listeners,
+        methods
+    ])
+
+
+    const name = () => 'app-hello-world'
+
+    const template = () => {
+        return { HTML, CSS }
+    }
+
+    const children = () => []
+
+    const hooks = () => [
+        beforeOnRender,
+        afterOnRender
+    ]
+
+    const listeners = () => []
+
+    const methods = () => [
+        ...mapActions(),
+    ]
+
+    const beforeOnRender = () => []
+    const afterOnRender = () => []
+
+    const rerender = () => {
+        render('app-hello-world', getState())
+    }
+
+    return createComponent()
+}
+
+```
+
+* template
+
+```js
+
+import { html } from 'r9x_js'
+
+export default (state, props) => {
+    return () => html `
+        <h1 class="title">${state.title}</h1>
+    `
+}
+
+```
+
+
+* Styles
+
+```js
+
+import { css } from 'r9x_js'
+
+export default (ctx) => {
+    return css `
+    .title { 
+        display:block;
+        float:left;
+        width:100%;
+        padding:15px;
+        margin:15px;
+        border:1px #ebebeb solid;
+        text-align:center;
+    }
+    `
+}
+
+```
