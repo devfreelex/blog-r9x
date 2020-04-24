@@ -5,7 +5,7 @@ import CSS from './appMostRead.styles'
 
 export default () => {
 
-    watch([], () => [])
+    watch(['SET_MOST_READ'], () => [rerender])
 
     setScope(() => [
         name,
@@ -36,8 +36,21 @@ export default () => {
         ...mapActions(),
     ]
 
-    const beforeOnRender = () => []
+    const beforeOnRender = () => [calcMostRead]
     const afterOnRender = () => []
+
+    const calcMostRead = () => {
+        const state = getState()
+        const [, , , , setMostRead] = mapActions()
+        const [positionA, positionB, positionC, positionD] = state.posts.sort((prevPost, nextPost) => {
+            if (prevPost.views > nextPost.views) return 1
+            if (prevPost.views < nextPost.views) return -1
+            return 0;
+        }).reverse()
+
+        setMostRead({ positions: [positionA, positionB, positionC, positionD] })
+
+    }
 
     const rerender = () => {
         render('app-most-read', getState())

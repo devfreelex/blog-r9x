@@ -16,9 +16,14 @@ const countView = (payload) => {
     dispatch('COUNT_VIEW', payload)
 }
 
+const setMostRead = (payload) => {
+    dispatch('SET_MOST_READ', payload)
+}
+
 export default {
     setPostById,
     toggleMenu,
     setDataView,
-    countView
+    countView,
+    setMostRead
 }
